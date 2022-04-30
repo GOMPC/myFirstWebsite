@@ -1,0 +1,41 @@
+body{/*왜 햇는가~*/
+  margin:0;
+}
+a {
+  color:black;
+  text-decoration: none;
+}
+h1 {
+  font-size:45px;
+  text-align: center;
+  border-bottom: 1px solid black;
+  margin:0;/*margin값을 왜 먼저 주는지, 도구에서 확인하도록*/
+  padding:20px;
+}
+ul {
+  border-right:1px solid gray;
+  width:100px; /*ul태그가 block level element라 폭을 강제지정*/
+  margin:0;
+  padding:20px;
+}
+#grid{
+  display: grid;
+  grid-template-columns: 150px 1fr;
+}
+#grid ul{ /*ul태그 중 부모가 grid인 친구만 구체적으로 지정. 이렇게 하니 ul태그의 값을 안따르네?*/
+  padding-left:33px;
+}
+#article{
+  padding-left:25px;
+}
+@media(max-width:500px){
+  #grid{
+    display: block;
+  }
+  ul{
+    border-right:none;
+  }
+  h1{
+    border-bottom: none;
+  }
+}
